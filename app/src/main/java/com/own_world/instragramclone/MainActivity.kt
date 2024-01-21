@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,9 +21,15 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this@MainActivity, SingUpActivity::class.java))
-            finish()
+            if (FirebaseAuth.getInstance().currentUser == null) {
+                startActivity(Intent(this@MainActivity, SingUpActivity::class.java))
+                finish()
+            } else {
+                startActivity(Intent(this@MainActivity, HomeActivity::class.java))
+                finish()
+
+            }
         }, 2000)
 
-        }
     }
+}
