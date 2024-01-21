@@ -21,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         }
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this@MainActivity, SingUpActivity::class.java))
+            finish()
         }, 2000)
+
         }
     }
