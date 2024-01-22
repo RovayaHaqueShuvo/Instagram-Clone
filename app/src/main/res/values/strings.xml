@@ -10,4 +10,5 @@
     <string name="email">Email</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="New_Post">Your Post may be appear in posts and can be seen on the posts tab under your profile </string>
 </resources>
