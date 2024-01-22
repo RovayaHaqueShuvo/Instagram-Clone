@@ -3,23 +3,30 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
-
+    app:startDestination="@id/home">
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.own_world.instragramclone.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:id="@+id/home"
+        android:name="com.own_world.instragramclone.Fragments.HomeFragment"
+        android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/navigation_dashboard"
-        android:name="com.own_world.instragramclone.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
+        android:id="@+id/search"
+        android:name="com.own_world.instragramclone.Fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
     <fragment
-        android:id="@+id/navigation_notifications"
-        android:name="com.own_world.instragramclone.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/add"
+        android:name="com.own_world.instragramclone.Fragments.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" />
+    <fragment
+        android:id="@+id/reel"
+        android:name="com.own_world.instragramclone.Fragments.ReelsFragment"
+        android:label="fragment_reels"
+        tools:layout="@layout/fragment_reels" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.own_world.instragramclone.Fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
