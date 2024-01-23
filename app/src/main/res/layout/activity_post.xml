@@ -24,7 +24,7 @@
         app:title="New Post" />
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/select_Image"
+        android:id="@+id/select_reel"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_marginTop="16dp"
@@ -37,7 +37,7 @@
         app:riv_corner_radius="15dp" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/wei"
+        android:id="@+id/caption_edtxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -45,9 +45,9 @@
         android:layout_marginEnd="16dp"
         app:boxStrokeColor="@color/Blue"
         android:hint="Write a Content"
-        app:layout_constraintEnd_toEndOf="@+id/select_Image"
-        app:layout_constraintStart_toStartOf="@+id/select_Image"
-        app:layout_constraintTop_toBottomOf="@+id/select_Image">
+        app:layout_constraintEnd_toEndOf="@+id/select_reel"
+        app:layout_constraintStart_toStartOf="@+id/select_reel"
+        app:layout_constraintTop_toBottomOf="@+id/select_reel">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -65,10 +65,10 @@
         android:layout_margin="10dp"
         android:layout_marginTop="24dp"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/wei"
+        app:layout_constraintEnd_toEndOf="@+id/caption_edtxt"
         app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="@+id/wei"
-        app:layout_constraintTop_toBottomOf="@+id/wei">
+        app:layout_constraintStart_toStartOf="@+id/caption_edtxt"
+        app:layout_constraintTop_toBottomOf="@+id/caption_edtxt">
 
         <ImageView
             android:id="@+id/imageView2"
