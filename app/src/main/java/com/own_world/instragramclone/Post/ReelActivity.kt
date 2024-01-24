@@ -10,9 +10,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.firestore.toObjects
 import com.google.firebase.ktx.Firebase
 import com.own_world.instragramclone.HomeActivity
 import com.own_world.instragramclone.Modals.Reel
+import com.own_world.instragramclone.Modals.User
 import com.own_world.instragramclone.R
 import com.own_world.instragramclone.Util.POST_FOLDER
 import com.own_world.instragramclone.Util.REEL
@@ -64,6 +66,10 @@ class ReelActivity : AppCompatActivity() {
         }
 
         binding.postBtn.setOnClickListener {
+            Firebase.firestore.collection(Firebase.auth.currentUser!!.uid).get().addOnSuccessListener {
+                var user: List<User> = it.toObjects<User>()
+            }
+
             val reel: Reel = Reel(videoUrl!!,binding.captionEdtxt.editText?.text.toString())
 
             Firebase.firestore.collection(REEL).document().set(reel).addOnSuccessListener {

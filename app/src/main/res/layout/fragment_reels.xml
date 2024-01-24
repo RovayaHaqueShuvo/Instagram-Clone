@@ -6,6 +6,8 @@
     tools:context=".Fragments.ReelsFragment">
 
     <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewpaper"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:orientation="vertical" />
 </FrameLayout>

@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.own_world.instragramclone.Modals.Reel
+import com.own_world.instragramclone.R
 import com.own_world.instragramclone.databinding.ReelDgBinding
 import com.squareup.picasso.Picasso
 
@@ -27,7 +28,7 @@ class ReelAdpter(var context: Context, var reelList : ArrayList<Reel>): Recycler
 
         holder.binding.videoView.setVideoPath(reelList.get(position).reelUrl)
         holder.binding.videoView.setOnPreparedListener {
-            it.start()
+            holder.binding.videoView.start()
 
         }
     }
